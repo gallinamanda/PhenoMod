@@ -34,6 +34,9 @@ ggplot(lo, aes(x=latitude, y=first_yes_doy, color=first_yes_year)) +
 ggplot(fl, aes(x=latitude, y=first_yes_doy, color=first_yes_year)) + 
   geom_point() + theme_bw() + geom_smooth(method=lm, aes(fill=first_yes_year))
 
-# can we rearrange the data so that for single sites/individuals we have columns of year DOY?
+# rearrange the data (long to wide) so that for single sites/individuals we have 
+# columns by year giving DOY for comparison
+
+
 
 
