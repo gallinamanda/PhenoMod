@@ -24,7 +24,8 @@ lo <- lo[which(lo$first_yes_doy<=200),]
 # what is the high latitude red maple?
 odd <- lo[order(-lo$latitude),] # a single data point from 2012 in Juneau Alaska
 # let's just remove it for now since it has so much control
-lo <- lo[which(lo$latitude<=55),]
+lo <- lo[which(lo$latitude<=50),]
+fl <- fl[which(lo$latitude<=50),]
 
 # explore the red maples with some figures
 # leaf out DOY by latitude for different years...
@@ -38,5 +39,5 @@ ggplot(fl, aes(x=latitude, y=first_yes_doy, color=first_yes_year)) +
 # columns by year giving DOY for comparison
 
 
-
-
+saveRDS(lo, "clean_data/redmaple_lo.RDS")
+saveRDS(fl, "clean_data/redmaple_fl.RDS")

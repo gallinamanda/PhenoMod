@@ -5,10 +5,10 @@ all.dat <- npn_download_individual_phenometrics(request_source="Gallinat",
                                                 years=c(2008:2020),
                                                 #species_ids = 3, # red maple
                                                 phenophase_ids=c(371, 501),
-                                                climate_data = FALSE)
+                                                climate_data = TRUE)
 
 #convert to data frame
 all.dat <- as.data.frame(all.dat)
 
 #save it out for cleaning
-saveRDS(all.dat, "raw_data/NPN-LO_FL-08_20.RDS")
+saveRDS(all.dat, "raw_data/NPN-LO_FL-08_20-climate.RDS")
